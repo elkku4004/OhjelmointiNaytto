@@ -14,6 +14,7 @@ namespace ohjelmointinäyttö
 
                 Console.Write("Salasana: ");
                 string inputPassword = Console.ReadLine();
+
             }
             { }
              
