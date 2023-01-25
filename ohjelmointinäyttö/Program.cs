@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Security;
 
 namespace ohjelmointinäyttö
@@ -6,6 +7,9 @@ namespace ohjelmointinäyttö
     class Program
 
     {
+
+        static List<Käyttäjä> Käyttäjät = new List<Käyttäjä>();
+
         static void Main(string[] args)
         {
             while (true)
@@ -17,14 +21,14 @@ namespace ohjelmointinäyttö
                 Console.WriteLine("  - kirjaudu");
                 Console.WriteLine("  - poistu");
                 syöte = Console.ReadLine();
-
+                // Kun avaa konsolin, nämä tulevat näkyviin.
                 switch (syöte)
                 {
                     case "rekisteröi":
-
+                        RekisteröiKäyttäjä();
                         break;
                     case "kirjaudu":
-
+                        Kirjaudu();
                         break;
                     case "poistu":
                         
@@ -48,11 +52,25 @@ namespace ohjelmointinäyttö
 
         static void Kirjaudu()
         {
+            Console.Write("Käyttäjätunnus: ");
+            string inputUsername = Console.ReadLine();
+
+            Console.Write("Salasana: ");
+            SecureString inputPassword = GetPassword();
+
 
         }
 
         static void RekisteröiKäyttäjä()
         {
+            Console.Write("Anna Käyttäjätunnus: ");
+            string inputUsername = Console.ReadLine();
+
+            Console.Write("Anna Salasana: ");
+            SecureString inputPassword = GetPassword();
+
+            Käyttäjä uusiKäyttäjä = new Käyttäjä();
+            uusiKäyttäjä.KäyttäjäTunnus = inputUsername;
 
         }
 
