@@ -31,10 +31,10 @@ namespace ohjelmointinäyttö
                             Kirjaudu();
                             break;
                         case "poistu":
+                        Poistu();
 
                             break;
                         default:
-                            
                                 break;
                                 // loopin endaus, vittu miten tää toimii perkele
                            
@@ -74,8 +74,15 @@ namespace ohjelmointinäyttö
             SecureString inputPassword = GetPassword();
 
             Käyttäjä uusiKäyttäjä = new Käyttäjä();
-            uusiKäyttäjä.KäyttäjäTunnus = inputUsername;
+            uusiKäyttäjä.KäyttäjäTunnus = inputUsername;  // uuden käyttäjän luominen
 
+        }
+
+        static void Poistu()
+        {
+            Console.Write("Poistu");
+           
+                // tähänki pitäs heittää ny jotai
         }
 
         static SecureString GetPassword()  // salasanan maskeeramis metodi securestring
@@ -107,5 +114,12 @@ namespace ohjelmointinäyttö
         }
     }
 } 
+
+
+// todo 
+// käyttäjien lista, database hommat
+// onko käyttäjätunnus ja salasana oikeat
+// printtaa consoliin kaiken vaa kerran
+// salasanan ja käyttäjätunnuksen minimerkkien määrä
 
 
