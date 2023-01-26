@@ -12,30 +12,34 @@ namespace ohjelmointinäyttö
 
         static void Main(string[] args)
         {
-            while (true)
-            {
-
+            
+                for (int i = 0; i <= 1; i++)
+                {
                 string syöte;
                 Console.WriteLine("Anna komento:");
                 Console.WriteLine("  - rekisteröi");
                 Console.WriteLine("  - kirjaudu");
                 Console.WriteLine("  - poistu");
                 syöte = Console.ReadLine();
-                // Kun avaa konsolin, nämä tulevat näkyviin.
-                switch (syöte)
-                {
-                    case "rekisteröi":
-                        RekisteröiKäyttäjä();
-                        break;
-                    case "kirjaudu":
-                        Kirjaudu();
-                        break;
-                    case "poistu":
-                        
-                        break;
-                    default:
-                        break;
-                }
+                    // Kun avaa konsolin, nämä tulevat näkyviin.
+                    switch (syöte)
+                    {
+                        case "rekisteröi":
+                            RekisteröiKäyttäjä();  // komentojen tekeminen
+                            break;
+                        case "kirjaudu":
+                            Kirjaudu();
+                            break;
+                        case "poistu":
+
+                            break;
+                        default:
+                            
+                                break;
+                                // loopin endaus, vittu miten tää toimii perkele
+                           
+
+                    }
             }
 
             Console.Write("Käyttäjätunnus: ");
@@ -50,7 +54,7 @@ namespace ohjelmointinäyttö
         // Jos ei ole niin väärä salasana tai tunnus
 
 
-        static void Kirjaudu()
+        static void Kirjaudu()      // kirjaudu metodi aloitus
         {
             Console.Write("Käyttäjätunnus: ");
             string inputUsername = Console.ReadLine();
@@ -61,12 +65,12 @@ namespace ohjelmointinäyttö
 
         }
 
-        static void RekisteröiKäyttäjä()
+        static void RekisteröiKäyttäjä()  // käyttäjän rekisteröinti metodi
         {
-            Console.Write("Anna Käyttäjätunnus: ");
+            Console.Write("Anna Käyttäjätunnus: ");    // annetaan käyttäjätunnus
             string inputUsername = Console.ReadLine();
 
-            Console.Write("Anna Salasana: ");
+            Console.Write("Anna Salasana: ");  // Annetaan salasana
             SecureString inputPassword = GetPassword();
 
             Käyttäjä uusiKäyttäjä = new Käyttäjä();
@@ -74,9 +78,9 @@ namespace ohjelmointinäyttö
 
         }
 
-        static SecureString GetPassword()
+        static SecureString GetPassword()  // salasanan maskeeramis metodi securestring
         {
-            var pwd = new SecureString();
+            var pwd = new SecureString();  // loopin aloitus
             while (true)
             {
                 ConsoleKeyInfo i = Console.ReadKey(true);
@@ -102,6 +106,6 @@ namespace ohjelmointinäyttö
             return pwd;
         }
     }
-}
+} 
 
 
