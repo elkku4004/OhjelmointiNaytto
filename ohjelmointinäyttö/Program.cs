@@ -8,7 +8,7 @@ namespace ohjelmointinäyttö
 
     {
 
-        static List<Käyttäjä> Käyttäjät = new List<Käyttäjä>();
+        static List<Käyttäjä> Käyttäjät = new List<Käyttäjä>();  // käyttäjä luokan lista
 
         static void Main(string[] args)
         {
@@ -25,13 +25,13 @@ namespace ohjelmointinäyttö
                     switch (syöte)
                     {
                         case "rekisteröi":
-                            RekisteröiKäyttäjä();  // komentojen tekeminen
+                            RekisteröiKäyttäjä();  // rekisteröi ohjeet
                             break;
-                        case "kirjaudu":
+                        case "kirjaudu":  // kirjaudu ohjeet
                             Kirjaudu();
                             break;
-                        case "poistu":
-                        Poistu();
+                        case "poistu":  
+                        Poistu();   // poistu ohjeet
 
                             break;
                         default:
