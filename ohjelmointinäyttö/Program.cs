@@ -36,8 +36,10 @@ namespace ohjelmointinäyttö
                             break;
                         default:
                                 break;
-                                // loopin endaus, vittu miten tää toimii perkele
-                           
+                        // loopin endaus, vittu miten tää toimii perkele
+                        {
+                            break;
+                        }
 
                     }
             }
@@ -116,10 +118,9 @@ namespace ohjelmointinäyttö
 } 
 
 
-// todo 
+// todo lista
 // käyttäjien lista, database hommat
 // onko käyttäjätunnus ja salasana oikeat
 // printtaa consoliin kaiken vaa kerran
 // salasanan ja käyttäjätunnuksen minimerkkien määrä
-
-
+// jos jaksaa ni "encrypted database" hommat
