@@ -83,6 +83,7 @@ namespace ohjelmointinäyttö
         static void Poistu()
         {
             Console.Write("Poistu");
+            
            
                 // tähänki pitäs heittää ny jotai
         }
