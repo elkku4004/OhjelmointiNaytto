@@ -120,7 +120,7 @@ namespace ohjelmointinäyttö
 
 
 // todo lista
-// käyttäjien lista, database hommat
+// käyttäjien lista, Tiedostoon kirjoittaminen
 // onko käyttäjätunnus ja salasana oikeat
 // printtaa consoliin kaiken vaa kerran
 // salasanan ja käyttäjätunnuksen minimerkkien määrä
