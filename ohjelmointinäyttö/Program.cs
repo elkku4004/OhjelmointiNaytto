@@ -13,8 +13,8 @@ namespace ohjelmointinäyttö
         static void Main(string[] args)
         {
             
-                for (int i = 0; i <= 1; i++)
-                {
+                
+                
                 string syöte;
                 Console.WriteLine("Anna komento:");
                 Console.WriteLine("  - rekisteröi");
@@ -42,13 +42,9 @@ namespace ohjelmointinäyttö
                         }
 
                     }
-            }
+            
 
-            Console.Write("Käyttäjätunnus: ");
-            string inputUsername = Console.ReadLine();
-
-            Console.Write("Salasana: ");
-            SecureString inputPassword = GetPassword();
+          
 
         }
         // Suorittaa kirjautumisen
@@ -63,6 +59,10 @@ namespace ohjelmointinäyttö
 
             Console.Write("Salasana: ");
             SecureString inputPassword = GetPassword();
+
+            Console.WriteLine("Kirjauduit sisään");
+
+            
 
 
         }
