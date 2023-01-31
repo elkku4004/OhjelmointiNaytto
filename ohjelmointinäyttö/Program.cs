@@ -10,27 +10,16 @@ namespace ohjelmointinäyttö
 
     {
 
-<<<<<<< Updated upstream
         static List<Käyttäjä> Käyttäjät = new List<Käyttäjä>();  // käyttäjä luokan lista
         static SqlConnection conn;
 
-=======
-        static List<Käyttäjä> Käyttäjät = new List<Käyttäjä>();
-        Console.Writeline(Käyttäjä);
->>>>>>> Stashed changes
         static void Main(string[] args)
         {
-<<<<<<< HEAD
             ConnectDatabase();
 
 
             for (int i = 0; i <= 1; i++)
             {
-=======
-            
-                
-                
->>>>>>> 079ce45bf2ce94f9b72cdcbf59fa9a9acbc9cc7d
                 string syöte;
                 Console.WriteLine("Anna komento:");
                 Console.WriteLine("  - rekisteröi");
@@ -53,16 +42,8 @@ namespace ohjelmointinäyttö
                     default:
                         break;
 
-<<<<<<< HEAD
                 }
             }
-=======
-                    }
-            
-
-          
-
->>>>>>> 079ce45bf2ce94f9b72cdcbf59fa9a9acbc9cc7d
         }
         // Suorittaa kirjautumisen
         // Jos on oikea tunnus, kirjautuu sisään
@@ -76,11 +57,17 @@ namespace ohjelmointinäyttö
 
             Console.Write("Salasana: ");
             SecureString inputPassword = GetPassword();
+            StringBuilder strBuilder = new StringBuilder();
+            strBuilder.Append("SELECT * Users VALUES ");
 
-            Console.WriteLine("Kirjauduit sisään");
+            string sqlQuery = strBuilder.ToString();
 
-            
-
+            using (SqlCommand command = new SqlCommand(sqlQuery, conn)) //pass SQL query created above and connection
+            {
+                command.ExecuteNonQuery(); //execute the Query
+                Console.WriteLine("");
+                Console.WriteLine("Query Executed.");
+            }
 
         }
 
@@ -114,22 +101,16 @@ namespace ohjelmointinäyttö
         static void Poistu()
         {
             Console.Write("Poistu");
-<<<<<<< HEAD
 
             // tähänki pitäs heittää ny jotai
-=======
-            
-           
-                // tähänki pitäs heittää ny jotai
->>>>>>> 079ce45bf2ce94f9b72cdcbf59fa9a9acbc9cc7d
         }
 
         static void ConnectDatabase()
         {
             Console.WriteLine("Getting Connection ...");
 
-            var datasource = @"STUDY21P-104827\SQLEXPRESS";//your server
-            var database = "Ohjelmointi"; //your database name
+            var datasource = @"STUDY21P-104827\SQLEXPRESS";// SQL palvelimen sijainti
+            var database = "Ohjelmointi"; //Tietokannan nimi
 
             //your connection string 
             string connString = @"Server=" + datasource + ";Database="
@@ -187,7 +168,7 @@ namespace ohjelmointinäyttö
 
 
 // todo lista
-// käyttäjien lista, Tiedostoon kirjoittaminen
+// käyttäjien lista, database hommat
 // onko käyttäjätunnus ja salasana oikeat
 // printtaa consoliin kaiken vaa kerran
 // salasanan ja käyttäjätunnuksen minimerkkien määrä
