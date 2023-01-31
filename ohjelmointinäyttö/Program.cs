@@ -10,9 +10,14 @@ namespace ohjelmointinäyttö
 
     {
 
+<<<<<<< Updated upstream
         static List<Käyttäjä> Käyttäjät = new List<Käyttäjä>();  // käyttäjä luokan lista
         static SqlConnection conn;
 
+=======
+        static List<Käyttäjä> Käyttäjät = new List<Käyttäjä>();
+        Console.Writeline(Käyttäjä);
+>>>>>>> Stashed changes
         static void Main(string[] args)
         {
             ConnectDatabase();
