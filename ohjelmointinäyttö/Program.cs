@@ -20,11 +20,17 @@ namespace ohjelmointinäyttö
 >>>>>>> Stashed changes
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             ConnectDatabase();
 
 
             for (int i = 0; i <= 1; i++)
             {
+=======
+            
+                
+                
+>>>>>>> 079ce45bf2ce94f9b72cdcbf59fa9a9acbc9cc7d
                 string syöte;
                 Console.WriteLine("Anna komento:");
                 Console.WriteLine("  - rekisteröi");
@@ -47,8 +53,16 @@ namespace ohjelmointinäyttö
                     default:
                         break;
 
+<<<<<<< HEAD
                 }
             }
+=======
+                    }
+            
+
+          
+
+>>>>>>> 079ce45bf2ce94f9b72cdcbf59fa9a9acbc9cc7d
         }
         // Suorittaa kirjautumisen
         // Jos on oikea tunnus, kirjautuu sisään
@@ -62,6 +76,10 @@ namespace ohjelmointinäyttö
 
             Console.Write("Salasana: ");
             SecureString inputPassword = GetPassword();
+
+            Console.WriteLine("Kirjauduit sisään");
+
+            
 
 
         }
@@ -96,8 +114,14 @@ namespace ohjelmointinäyttö
         static void Poistu()
         {
             Console.Write("Poistu");
+<<<<<<< HEAD
 
             // tähänki pitäs heittää ny jotai
+=======
+            
+           
+                // tähänki pitäs heittää ny jotai
+>>>>>>> 079ce45bf2ce94f9b72cdcbf59fa9a9acbc9cc7d
         }
 
         static void ConnectDatabase()
@@ -163,7 +187,7 @@ namespace ohjelmointinäyttö
 
 
 // todo lista
-// käyttäjien lista, database hommat
+// käyttäjien lista, Tiedostoon kirjoittaminen
 // onko käyttäjätunnus ja salasana oikeat
 // printtaa consoliin kaiken vaa kerran
 // salasanan ja käyttäjätunnuksen minimerkkien määrä
