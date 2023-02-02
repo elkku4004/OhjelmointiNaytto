@@ -92,7 +92,7 @@ namespace ohjelmointinäyttö
 
             using (SqlCommand command = new SqlCommand(sqlQuery, conn)) //pass SQL query created above and connection
             {
-                command.ExecuteNonQuery(); //execute the Query
+                command.ExecuteNonQuery(); //Suorittaa queryn
                 Console.WriteLine("");
                 Console.WriteLine("Query Executed.");
             }
@@ -171,3 +171,4 @@ namespace ohjelmointinäyttö
 // onko käyttäjätunnus ja salasana oikeat
 // printtaa consoliin kaiken vaa kerran
 // salasanan ja käyttäjätunnuksen minimerkkien määrä
+// vittu saatana miksi kirjautuminen ei toimi paska kieli
