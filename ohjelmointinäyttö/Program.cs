@@ -66,7 +66,7 @@ namespace ohjelmointinäyttö
             {
                 command.ExecuteNonQuery(); //execute the Query
                 Console.WriteLine("");
-                Console.WriteLine("Query Executed.");
+                Console.WriteLine("Query suoritettu.");
             }
 
         }
@@ -168,8 +168,6 @@ namespace ohjelmointinäyttö
 
 
 // todo lista
-// käyttäjien lista, database hommat
 // onko käyttäjätunnus ja salasana oikeat
 // printtaa consoliin kaiken vaa kerran
 // salasanan ja käyttäjätunnuksen minimerkkien määrä
-// jos jaksaa ni "encrypted database" hommat
