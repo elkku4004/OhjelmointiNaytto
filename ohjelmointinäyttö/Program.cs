@@ -64,7 +64,7 @@ namespace ohjelmointinäyttö
 
             using (SqlCommand command = new SqlCommand(sqlQuery, conn)) //pass SQL query created above and connection
             {
-                command.ExecuteNonQuery(); //execute the Query
+                command.ExecuteNonQuery(); //Suorittaa Query
                 Console.WriteLine("");
                 Console.WriteLine("Query suoritettu.");
             }
