@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Security;
 using System.Text;
+using System.Threading;
 
 namespace ohjelmointinäyttö
 {
@@ -13,7 +14,7 @@ namespace ohjelmointinäyttö
         static List<Käyttäjä> Käyttäjät = new List<Käyttäjä>();  // käyttäjä luokan lista
         static SqlConnection conn;
 
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
             ConnectDatabase();
 
@@ -65,8 +66,7 @@ namespace ohjelmointinäyttö
             using (SqlCommand command = new SqlCommand(sqlQuery, conn)) //pass SQL query created above and connection
             {
                 command.ExecuteNonQuery(); //Suorittaa Query
-                Console.WriteLine("");
-                Console.WriteLine("Query suoritettu.");
+                Console.WriteLine("\nQuery suoritettu.");
             }
 
         }
@@ -93,21 +93,20 @@ namespace ohjelmointinäyttö
             using (SqlCommand command = new SqlCommand(sqlQuery, conn)) //pass SQL query created above and connection
             {
                 command.ExecuteNonQuery(); //Suorittaa queryn
-                Console.WriteLine("");
-                Console.WriteLine("Query Executed.");
+                Console.WriteLine("\nQuery Executed.");
             }
         }
 
         static void Poistu()
         {
-            Console.Write("Poistu");
-
-            // tähänki pitäs heittää ny jotai
+            Console.Write("Poistutaan");
+            //Thread.Sleep(1000); // Jos halutaan että käyttäjä ehtii nähä "Poistutaan" viestin
+            System.Environment.Exit(0);
         }
 
         static void ConnectDatabase()
         {
-            Console.WriteLine("Getting Connection ...");
+            Console.WriteLine("Getting Connection...");
 
             var datasource = @"STUDY21P-104827\SQLEXPRESS";// SQL palvelimen sijainti
             var database = "Ohjelmointi"; //Tietokannan nimi
@@ -122,16 +121,16 @@ namespace ohjelmointinäyttö
 
             try
             {
-                Console.WriteLine("Openning Connection ...");
+                Console.WriteLine("Opening Connection...");
 
                 //open connection
                 conn.Open();
 
-                Console.WriteLine("Connection successful!");
+                Console.WriteLine("Connection Successful!");
             }
             catch (Exception e)
             {
-                Console.WriteLine("Error: " + e.Message);
+                Console.WriteLine("Error while opening connection. Info: " + e.Message);
             }
         }
 
