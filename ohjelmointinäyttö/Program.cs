@@ -65,8 +65,7 @@ namespace ohjelmointinäyttö
             using (SqlCommand command = new SqlCommand(sqlQuery, conn)) //pass SQL query created above and connection
             {
                 command.ExecuteNonQuery(); //Suorittaa Query
-                Console.WriteLine("");
-                Console.WriteLine("Query suoritettu.");
+                Console.WriteLine("\nQuery suoritettu."); // \n on helpompi tapa uuteen lineen
             }
 
         }
@@ -101,8 +100,7 @@ namespace ohjelmointinäyttö
         static void Poistu()
         {
             Console.Write("Poistu");
-
-            // tähänki pitäs heittää ny jotai
+            System.Environment.Exit(0); 
         }
 
         static void ConnectDatabase()
